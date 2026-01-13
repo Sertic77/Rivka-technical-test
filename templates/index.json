@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
@@ -65,6 +66,7 @@
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",
         "media_type_2_mobile": "image",
+        "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -281,10 +283,160 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "collection_slider_XzPtCH": {
+      "type": "collection-slider",
+      "blocks": {
+        "slide_collection_peMEWz": {
+          "type": "slide-collection",
+          "name": "Collection Item",
+          "settings": {
+            "collection": "frontpage",
+            "image": "shopify://shop_images/energy-svgrepo-com.svg",
+            "link": "",
+            "content_direction": "column",
+            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20,
+            "padding-block-start": 20,
+            "padding-block-end": 20
+          },
+          "blocks": {}
+        },
+        "slide_collection_GNeVmm": {
+          "type": "slide-collection",
+          "name": "Collection Item",
+          "settings": {
+            "collection": "frontpage",
+            "image": "shopify://shop_images/leaf-outline-svgrepo-com.svg",
+            "link": "",
+            "content_direction": "column",
+            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20,
+            "padding-block-start": 20,
+            "padding-block-end": 20
+          },
+          "blocks": {}
+        },
+        "slide_collection_mcEYC7": {
+          "type": "slide-collection",
+          "name": "Collection Item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/star-svgrepo-com.svg",
+            "link": "",
+            "content_direction": "column",
+            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20,
+            "padding-block-start": 20,
+            "padding-block-end": 20
+          },
+          "blocks": {}
+        },
+        "slide_collection_K8daMD": {
+          "type": "slide-collection",
+          "name": "Collection Item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/1st_anniversary_promo.png",
+            "link": "",
+            "content_direction": "column",
+            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20,
+            "padding-block-start": 20,
+            "padding-block-end": 20
+          },
+          "blocks": {}
+        },
+        "slide_collection_tdnUap": {
+          "type": "slide-collection",
+          "name": "Collection Item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/GiftCard.webp",
+            "link": "",
+            "content_direction": "column",
+            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20,
+            "padding-block-start": 20,
+            "padding-block-end": 20
+          },
+          "blocks": {}
+        },
+        "slide_collection_cixgkK": {
+          "type": "slide-collection",
+          "name": "Collection Item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/eye-svgrepo-com.svg",
+            "link": "",
+            "content_direction": "column",
+            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20,
+            "padding-block-start": 20,
+            "padding-block-end": 20
+          },
+          "blocks": {}
+        },
+        "slide_collection_hNaMQc": {
+          "type": "slide-collection",
+          "name": "Collection Item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/hearth-svgrepo-com.svg",
+            "link": "",
+            "content_direction": "column",
+            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20,
+            "padding-block-start": 20,
+            "padding-block-end": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "slide_collection_peMEWz",
+        "slide_collection_GNeVmm",
+        "slide_collection_mcEYC7",
+        "slide_collection_K8daMD",
+        "slide_collection_tdnUap",
+        "slide_collection_cixgkK",
+        "slide_collection_hNaMQc"
+      ],
+      "name": "Collection Slider",
+      "settings": {
+        "title": "Collection Slider",
+        "color_scheme": "",
+        "show_arrows": true,
+        "icon_style": "arrow",
+        "padding-block-start": 36,
+        "padding-block-end": 36
+      }
     }
   },
   "order": [
     "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "product_list_fa6P9H",
+    "collection_slider_XzPtCH"
   ]
 }

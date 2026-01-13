@@ -365,6 +365,7 @@ export class Slideshow extends Component {
 
   get previousIndex() {
     const { current, visibleSlides } = this;
+    if (this.hasAttribute('single-step')) return current - 1;
     const modifier = visibleSlides.length > 1 ? visibleSlides.length : 1;
 
     return current - modifier;
@@ -372,6 +373,7 @@ export class Slideshow extends Component {
 
   get nextIndex() {
     const { current, visibleSlides } = this;
+    if (this.hasAttribute('single-step')) return current + 1;
     const modifier = visibleSlides.length > 1 ? visibleSlides.length : 1;
 
     return current + modifier;
@@ -512,9 +514,8 @@ export class Slideshow extends Component {
       this.#resizeObserver = new ResizeObserver(async () => {
         if (viewTransition.current) await viewTransition.current;
 
-        if (visibleSlidesAmount > 1) {
-          this.#updateVisibleSlides();
-        }
+        // Always update visible slides on resize to handle breakpoint changes
+        this.#updateVisibleSlides();
 
         if (this.hasAttribute('auto-hide-controls')) {
           this.#updateControlsVisibility();

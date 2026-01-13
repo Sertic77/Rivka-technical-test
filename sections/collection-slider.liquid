@@ -1,0 +1,113 @@
+{{ 'section-collection-slider.css' | asset_url | stylesheet_tag }}
+
+{% liquid  assign slide_count = section.blocks.size
+  assign slide_position = 'center'
+%}
+
+{% capture blocks_content %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+<div 
+  class="section collection-slider-section color-{{ section.settings.color_scheme }}"
+  data-testid="collection-slider-section"
+  style="
+    {% render 'spacing-style', settings: section.settings %}
+    --gutter-slide-width: 0px; 
+  "
+>
+  {% if section.settings.title != blank %}
+    <div class="page-width">
+       <h2 class="title h2">{{ section.settings.title }}</h2>
+    </div>
+  {% endif %}
+
+  {% render 'slideshow',
+    class: 'collection-slider__slideshow',
+    slides: blocks_content,
+    show_arrows: section.settings.show_arrows,
+    icon_style: section.settings.icon_style,
+    icon_shape: 'circle',
+    infinite: false,
+    initial_slide: 0,
+    slide_count: slide_count,
+    slide_position: slide_position,
+    slide_position: slide_position,
+    slide_size: 'small'
+  %}
+</div>
+
+{% schema %}
+{
+  "name": "Collection Slider",
+  "blocks": [
+    {
+      "type": "slide-collection"
+    }
+  ],
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Collection Slider"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show arrows",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "icon_style",
+      "label": "Arrow icon",
+      "options": [
+        { "value": "arrow", "label": "Arrow" },
+        { "value": "chevron", "label": "Chevron" }
+      ],
+      "default": "arrow"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Slider"
+    }
+  ]
+}
+{% endschema %}

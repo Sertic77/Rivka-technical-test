@@ -4,23 +4,30 @@
   assign slide_position = 'center'
 %}
 
+{% capture heading %} 
+    {% content_for 'block', id: 'heading', type: '_heading', text: '<h3>Collection Slider</h3>' %}
+{% endcapture %}
+
+{% capture description %} 
+    {% content_for 'block', id: 'description', type: 'text', fallback_text: '<p>A collection slider section, perfect for showcasing your collections in a dynamic and engaging way.</p>' %}
+{% endcapture %}
+
 {% capture blocks_content %}
   {% content_for 'blocks' %}
 {% endcapture %}
 
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div 
-  class="section collection-slider-section color-{{ section.settings.color_scheme }}"
+  class="section collection-slider-section 
+        spacing-style color-{{ section.settings.color_scheme }}"
   data-testid="collection-slider-section"
   style="
     {% render 'spacing-style', settings: section.settings %}
     --gutter-slide-width: 0px; 
   "
 >
-  {% if section.settings.title != blank %}
-    <div class="page-width">
-       <h2 class="title h2">{{ section.settings.title }}</h2>
-    </div>
-  {% endif %}
+  {{ heading }}
+  {{ description }}
 
   {% render 'slideshow',
     class: 'collection-slider__slideshow',
@@ -45,14 +52,8 @@
       "type": "slide-collection"
     }
   ],
-  "class": "section",
+  "class": "section-wrapper",
   "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Collection Slider"
-    },
     {
       "type": "color_scheme",
       "id": "color_scheme",

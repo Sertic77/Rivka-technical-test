@@ -1,6 +1,10 @@
+{%- doc -%}
+  Renders a text block.
 
+  @param {string} fallback_text
+{%- enddoc -%}
 
-{% render 'text', block: block %}
+{% render 'text', block: block, fallback_text: fallback_text %}
 
 {% schema %}
 {
